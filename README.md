@@ -194,4 +194,3 @@ The code is written for MATLAB. The current scripts use functions from the follo
 - **Signal Processing Toolbox** — required by the MUSIC workflow;
 - MATLAB's `vmd` implementation for Variational Mode Decomposition.
 
-The delay-analysis scripts are currently configured for the Fz channel and process both Right- and Left-cue trials by default.
