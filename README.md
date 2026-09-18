@@ -185,41 +185,6 @@ and run the script again.
 
 The atom-splitting analysis uses a fixed three-atom model and includes the noise-stability analysis. Results are written under the `atom_splitting_results` directory.
 
-## Complete Running Order
-
-For the main single-trial and three-delay analysis, the complete workflow is:
-
-```text
-Raw Data A / Data B
-        │
-        ▼
-Single Trial Fit/*_preprocessing_Fz_1.m
-        │
-        │  trial-wise VMD → IMF5 → normalization
-        ▼
-DataA/B_Fz_single_trial_preprocessed.mat
-        │
-        ▼
-Single Trial Fit/*_original_model_fit_Fz_2.m
-        │
-        ▼
-DataA/B_Fz_single_trial_original_model_fit_fixed_ranges.mat
-        │
-        ├──────────────────────────────┐
-        ▼                              ▼
-3V Delay/MUSIC                 3V Delay/Atom Splitting
-        │                              │
-        ▼                              ▼
-music_results/                 atom_splitting_results/
-```
-
-In short:
-
-1. Run the single-trial `_1` preprocessing scripts for Data A and Data B.
-2. Run the corresponding single-trial `_2` model-fitting scripts.
-3. Copy the two resulting `*_original_model_fit_fixed_ranges.mat` files into `3V Delay`.
-4. Run MUSIC for Data A and Data B.
-5. Run atom splitting for Data A and Data B.
 
 ## MATLAB Requirements
 
