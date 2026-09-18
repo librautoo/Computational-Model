@@ -68,16 +68,6 @@ For every retained trial, the `_1` preprocessing script:
 8. identifies the continuous positive interval containing the peak; and
 9. preserves the original cue-locked time axis for subsequent model fitting.
 
-The current VMD settings are:
-
-```text
-Sampling rate:       256 Hz
-Post-cue window:     400 samples
-Number of IMFs:      6
-Penalty factor:      2000
-Maximum iterations:  500
-Target mode:         IMF5
-```
 
 ### Data A
 
